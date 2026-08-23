@@ -42,7 +42,7 @@ if(isset($_POST["register"])){
     $stmt->bind_param('ssssssss',$firstname, $lastname, $age, $gender, $address, $email, $username, $hashed_password);
 
     if($stmt->execute()){
-        header("Location: log.php");
+        header("Location: landing.php");
     }else{
         echo "Error". $stmt->error;
     }
