@@ -42,7 +42,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
                     $stmt ->close();
                     $conn ->close();
 
-                    header("Location: landing.php");
+                    header("Location: landing.html");
                     exit();
                 }else{
                     $error = "Invalid email or password.";

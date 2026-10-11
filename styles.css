@@ -1,200 +1,132 @@
-/* Base Reset */
+:root {
+  font-family: "Courier New", Courier, monospace;
+  color: #c9d1d9;
+  background: #0a0e14;
+}
+
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
 body {
-  background-color: #f8fafc;
-  /* Recreating the dotted background */
-  background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
-  background-size: 24px 24px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  padding: 2rem;
+  margin: 0;
+  padding: 40px 20px;
+  background: #0a0e14;
+  color: #c9d1d9;
 }
 
-/* Card Container */
-.account-card {
-  background: #ffffff;
-  width: 100%;
-  max-width: 580px;
-  padding: 2.5rem;
-  border-radius: 10px;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.025);
-}
-
-/* Header Styles */
-.card-header {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.card-header h2 {
-  color: #0f172a;
-  font-size: 1.8rem;
-  font-weight: 700;
-  margin-bottom: 0.75rem;
-}
-
-.card-header p {
-  color: #64748b;
-  font-size: 0.95rem;
-  line-height: 1.5;
-  max-width: 85%;
+.page-shell {
+  width: min(100%, 710px);
   margin: 0 auto;
 }
 
-/* Form Layout */
-.account-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
+h1 {
+  margin: 0 0 16px;
+  font-size: 28px;
+  color: #00ff9d;
+  border-bottom: 2px solid #00ff9d;
+  padding-bottom: 8px;
 }
 
-.form-row {
-  display: flex;
-  gap: 1.25rem;
+h2 {
+  margin: 0 0 16px;
+  font-size: 22px;
+  color: #58a6ff;
 }
 
-.form-row.full-width {
-  flex-direction: column;
+.intro-warning {
+  margin: 0 0 16px;
+  padding: 12px;
+  color: #ff4d4d;
+  background: #2a0f0f;
+  border: 1px solid #ff4d4d;
+  border-left: 4px solid #ff4d4d;
+  font-weight: 700;
 }
 
-.form-group {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  gap: 0.5rem;
+.card {
+  margin-bottom: 16px;
+  padding: 20px;
+  background: #111820;
+  border: 1px solid #1f2a37;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
 
-.form-group label {
-  font-size: 0.85rem;
-  color: #334155;
-  font-weight: 500;
-}
-
-/* Input Fields */
-input[type="text"],
-input[type="email"],
-input[type="number"],
-input[type="password"],
-select {
-  width: 100%;
-  padding: 0.75rem 1rem;
-  border: 1px solid #e2e8f0;
-  border-radius: 6px;
-  font-size: 0.95rem;
-  color: #475569;
-  outline: none;
-  transition: border-color 0.2s ease;
-}
-
-input:focus, select:focus {
-  border-color: #4f46e5;
-}
-
-input::placeholder {
-  color: #94a3b8;
-}
-
-/* Custom Select Dropdown Arrow */
-select {
-  appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 1rem center;
-}
-
-/* Icons inside Inputs */
-.input-with-icon {
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-
-.input-with-icon input {
-  padding-left: 2.75rem;
-}
-
-.input-with-icon.both-icons input {
-  padding-right: 2.75rem;
-}
-
-.input-with-icon i {
-  position: absolute;
-  color: #94a3b8;
-  font-size: 1rem;
-}
-
-.left-icon {
-  left: 1rem;
-}
-
-.right-icon {
-  right: 1rem;
-  cursor: pointer;
-}
-
-/* Checkbox Section */
-.checkbox-row {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin: 0.5rem 0;
-}
-
-.checkbox-row input[type="checkbox"] {
-  width: 16px;
-  height: 16px;
-  border: 1px solid #e2e8f0;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.checkbox-row label {
-  font-size: 0.85rem;
-  color: #475569;
-}
-
-.checkbox-row a {
-  color: #4f46e5;
-  text-decoration: none;
-}
-
-.checkbox-row a:hover {
-  text-decoration: underline;
-}
-
-/* Submit Button */
-.submit-btn {
-  background-color: #554add;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  padding: 0.9rem;
-  font-size: 1rem;
+label {
+  display: block;
+  margin-bottom: 6px;
   font-weight: 600;
+  color: #8b949e;
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  min-height: 76px;
+  padding: 10px;
+  color: #c9d1d9;
+  background: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 4px;
+  font: inherit;
+  resize: vertical;
+}
+
+textarea:focus,
+button:focus-visible {
+  outline: 2px solid #00ff9d;
+  outline-offset: 2px;
+}
+
+button {
+  margin-top: 10px;
+  padding: 8px 14px;
+  color: #0a0e14;
+  background: #00ff9d;
+  border: 1px solid #00ff9d;
+  border-radius: 4px;
+  font: inherit;
+  font-weight: 700;
   cursor: pointer;
-  transition: background-color 0.2s ease;
-  margin-top: 0.5rem;
 }
 
-.submit-btn:hover {
-  background-color: #4338ca;
+button:hover {
+  background: #00cc7a;
+  border-color: #00cc7a;
 }
 
-/* Mobile Responsiveness */
-@media (max-width: 500px) {
-  .form-row {
-    flex-direction: column;
-    gap: 1.25rem;
+.output {
+  min-height: 52px;
+  margin-top: 12px;
+  padding: 12px;
+  color: #c9d1d9;
+  background: #0d1117;
+  border: 1px solid #30363d;
+  border-left: 4px solid #00ff9d;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+
+.status {
+  margin: 0;
+  font-weight: 700;
+}
+
+.success {
+  color: #00ff9d;
+}
+
+.warning {
+  color: #ff4d4d;
+}
+
+@media (max-width: 560px) {
+  body {
+    padding: 24px 14px;
   }
-  .account-card {
-    padding: 1.5rem;
+
+  .card {
+    padding: 18px;
   }
 }
