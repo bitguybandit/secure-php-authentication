@@ -17,6 +17,10 @@ if(isset($_POST["register"])){
         die("All fields are required!");
     }
 
+    if($password < 8){
+        die("Password should be 8 above character");
+    }
+
     if($password != $confirm_password){
         die("Password do not match");
     }
@@ -42,7 +46,7 @@ if(isset($_POST["register"])){
     $stmt->bind_param('ssssssss',$firstname, $lastname, $age, $gender, $address, $email, $username, $hashed_password);
 
     if($stmt->execute()){
-        header("Location: landing.php");
+        header("Location: landing.html");
     }else{
         echo "Error". $stmt->error;
     }
